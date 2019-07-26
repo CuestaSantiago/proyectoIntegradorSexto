@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="starter-template">
+    <div class="row">
+      <div class="col-md-12 mt-2">
+        <h1>{{ titulo }} </h1>
+        <br>
+
+        <form>
+          <div class="input-group">
+            <div class="form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="" >Seleccione Carrea:</span>
+                <select class="form-control" name="carrera" [(ngModel)]="empresa.carrera">
+                  <option></option>
+                  <option value="Desarrollo de Software">Desarrollo de Software</option>
+                  <option value="Guianza Turística">Guianza Turística</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Nombre de la Empresa</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Nombre de la Empresa" name="nombre_empresa" [(ngModel)]="empresa.nombre_empresa"/>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Nombre Representante</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Nombre Representante" name="nombre_representante" [(ngModel)]="empresa.nombre_representante"/>
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Correo</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Empresarial" name="correo_empresarial" [(ngModel)]="empresa.correo_empresarial"/>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Dirección</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Dirección" name="direccion" [(ngModel)]="empresa.direccion"/>
+          </div>
+
+          <br>
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Teléfono</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Empresa" name="telefono" [(ngModel)]="empresa.telefono"/>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Otro Teléfono</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Otro" name="telefono_opcional" [(ngModel)]="empresa.telefono_opcional"/>
+          </div>
+          
+          <br>
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Fecha de inico del contrato</span>
+            </div>
+            <input type="date" class="form-control" [(ngModel)]="empresa.fecha_inicio_contrato" name="fecha_inicio_contrato"/>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Fecha de fin del contrato</span>
+            </div>
+            <input type="date" class="form-control" [(ngModel)]="empresa.fecha_fin_contrato" name="fecha_fin_contrato"/>
+          </div>
+
+          <br>
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Compensación Voluntaria</span>
+            </div>
+            <input type="text" class="form-control" placeholder="¿Qué compensación se le va a dar al estudiante?" name="compensacion" [(ngModel)]="empresa.compensacion"/>
+          </div>
+
+          <br>
+          
+          <div class="form-group">
+            <button class="btn btn-primary" (click)="guardarEmpresa()">Aceptar</button>
+          </div>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

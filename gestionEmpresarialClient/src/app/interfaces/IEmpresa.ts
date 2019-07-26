@@ -1,0 +1,15 @@
+export interface IEmpresa {
+    id?: number,
+    carrera: string,
+    nombre_empresa: string,
+    nombre_representante:string,
+    correo_empresarial:string,
+    direccion:string,
+    telefono: string,
+    telefono_opcional: string,
+    fecha_inicio_contrato: string,
+    fecha_fin_contrato: string,
+    compensacion: string,
+    created_at?: string,
+    updated_at?: string,
+}

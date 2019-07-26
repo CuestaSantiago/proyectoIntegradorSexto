@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="starter-template">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h1>{{ titulo }} </h1>
+                <br>
+                <form>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Seleccione Empresa:</span>
+                        <select class="form-control" [(ngModel)]="empresas.id" name="seleccionado" equired>
+                            <option *ngFor="let empresa of empresa" value="empresa.id">{{empresa.carrera}}, Empresa:
+                                {{empresa.nombre_empresa}}</option>
+                        </select>
+                        <span class="input-group-text">Seleccione Tutor General:</span>
+                        <select class="form-control" [(ngModel)]="tutorGe.id" name="seleccionado"
+                            equired>
+                            <option></option>
+                            <option *ngFor="let tutorG of tutorGen" value="tutorG.id">{{tutorG.nombre1}}
+                                {{tutorG.apellido1}}</option>
+                        </select>
+                    </div>
+                    <br />
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Seleccione Tutor Específico:</span>
+                        <select class="form-control" [(ngModel)]="tutorEs.id" name="seleccionado"
+                            equired>
+                            <option></option>
+                            <option *ngFor="let tutorE of tutorEsp" value="tutorEsp.id">{{tutorE.nombre1}}
+                                {{tutorE.apellido1}}</option>
+                        </select>
+                        <span class="input-group-text">Seleccione Tutor Academico:</span>
+                        <select class="form-control" [(ngModel)]="tutorAc.id" name="seleccionado"
+                            equired>
+                            <option></option>
+                            <option *ngFor="let tutorA of tutorAca" value="tutorA.id">{{tutorA.nombre1}}
+                                {{tutorA.apellido1}}</option>
+                        </select>
+                    </div>
+
+                    <br />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Seleccione Estudiante:</span>
+                        <select class="form-control" [(ngModel)]="estudiantes.id" name="seleccionado" equired>
+                            <option></option>
+                            <option *ngFor="let estu of estudiante" value="estu.id">{{estu.nombre1}} {{estu.apellido1}}
+                            </option>
+                        </select>
+                        <span class="input-group-text">Seleccione Estado:</span>
+                        <select class="form-control" [(ngModel)]="asgEmpresa.estado" name="seleccionado" equired>
+                            <option></option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <button class="btn btn-primary" (click)="crearVinculacion()">Aceptar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

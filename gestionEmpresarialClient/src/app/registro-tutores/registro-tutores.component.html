@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="starter-template">
+    <div class="row">
+      <div class="col-md-12 mt-2">
+        <h1>{{ titulo }} </h1>
+        <br>
+        <form>
+
+          <div class="input-group-prepend">
+            <span class="input-group-text">Seleccione tipo Tutor:</span>
+            <select class="form-control" [(ngModel)]="seleccionado" name="seleccionado" equired>
+              <option value="A">Académico</option>
+              <option value="G">General</option>
+              <option value="E">Específico</option>
+            </select>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Identificación</span>
+            </div>
+            <input type="text" placeholder="1234567890" class="form-control" name="identificacion" [(ngModel)]="tutors.identificacion" />
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id=""> Primer Nombre</span>
+            </div>
+            <input type="text" class="form-control" name="nombre1" placeholder="Primer Nombre"
+              [(ngModel)]="tutors.nombre1">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id=""> Segundo Nombre</span>
+            </div>
+            <input type="text" class="form-control" name="nombre2" placeholder="Segundo Nombre"
+              [(ngModel)]="tutors.nombre2">
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id=""> Primer Apellido</span>
+            </div>
+            <input type="text" class="form-control" name="apellido1" placeholder="Primer Apellido"
+              [(ngModel)]="tutors.apellido1">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id=""> Segundo Apellido</span>
+            </div>
+            <input type="text" class="form-control" name="apellido2" placeholder="Segundo Apellido"
+              [(ngModel)]="tutors.apellido2">
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Fecha Nacimiento</span>
+            </div>
+            <input type="date" class="form-control" name="fechaN" [(ngModel)]="tutors.fecha_nacimiento">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Correo</span>
+            </div>
+            <input type="text" class="form-control" name="correoP" placeholder="ejemplo@algo.com"
+              [(ngModel)]="tutors.correo">
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Dirección</span>
+            </div>
+            <input type="text" class="form-control" name="direccion" [(ngModel)]="tutors.direccion">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Teléfono</span>
+            </div>
+            <input type="text" class="form-control" name="telefono" [(ngModel)]="tutors.telefono">
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <button class="btn btn-primary" (click)="guardarTutor()">Aceptar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
